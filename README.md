@@ -99,21 +99,64 @@ fork并按照格式修改hub.json
 在你的脚本中可直接使用api对象进行各种函数的调用  
 
 ## Api列表：  
-Todo  
+- api.ui()  
+
+非ui线程下使用：  
+api.ui()  
+可在控制台查看当前界面的所有控件的基本属性  
+**此函数在调试时非常有帮助**  
+
+参数：(selector,offset,size)  
+selector为选择器  
+offset为起始索引，size为从起始值查询多少个元素  
+最简单的调用方法为`api.ui()`
+
+```js
+api.ui(packageName(currentPackage()),0,500);
+```
+
+如果是UI线程需要创建线程才能运行阻塞函数，如：  
+```js
+threads.start(function () {
+    api.ui()
+});
+```
 
 # <span id="myHub">搭建自己的仓库：</span>
 官方仓库地址：`https://chrrg.github.io/chhub/hub.json`  
 搭建自己的仓库能够让用户只显示自己仓库中的脚本  
+## hub.json文件格式
+```json
+{
+    "code": 200,//必须200，否则会弹出text消息
+    "text": "",
+    "data": {
+        "HubRoot":"https://chrrg.github.io/chhub/hub.json",//当前地址
+        "ui":["files/ui.js",9],//数组第一个元素为用户界面ui.js的相对路径，第二个元素是版本号，若界面发生变化修改版本号，用户会自动更新ui.js
+        "list": [{
+            "id":1,
+            "name": "应用标题",
+            "file": "files/1.js",//脚本的相对路径
+            "version": "1.8.9",//脚本的版本
+            "desc": "一键完成淘宝喵币任务"//描述
+        }]//这里格式可以自定义
+    }
+}
+```
 
-## 发布自己的仓库
-仓库地址可以是github.io的静态，也可以是任何返回json的地址  
-且api返回格式可以自定义必须是json  
-需实现的ui.js，让用户打开后看到自己仓库的用户界面  
+## 创建自己的仓库
+仓库地址可以是github.io的静态，也可以是任何返回后端制作的json的地址  
+且api返回格式尽量与官方仓库返回格式保持一致  
+需自行实现ui.js，让用户打开后看到自己仓库的用户界面  
 ui.js中可扩展api提供给脚本使用  
 
 ## 引导用户使用自己的仓库
 用户第一次打开软件默认使用官方仓库地址  
 创建引导脚本，脚本中调用设置仓库地址的Api  
+```js
+api.setHubPath("http://127.0.0.1/myhub.asp")//设置成功将重启软件
+toast("设置失败！")//否则说明设置失败
+```
 上传自己的引导应用到官方仓库  
 用户打开此仓库完成确认后即可完成仓库地址的切换  
 

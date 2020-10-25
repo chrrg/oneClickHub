@@ -1,0 +1,10 @@
+{
+    "name": "一点仓库",
+    "main": "main.js",
+    "ignore": [
+        "build"
+    ],
+    "packageName": "com.app.ch.onekeyhub",
+    "versionName": "1.0.3",
+    "versionCode": 3
+}

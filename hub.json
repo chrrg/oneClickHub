@@ -1,0 +1,40 @@
+{
+    "code": 200,
+    "msg": "",
+    "data": {
+        "HubRoot":"https://chrrg.github.io/chhub/hub.json",
+        "ui":["files/ui.js",8],
+        "list": [{
+            "id":1,
+            "name": "2020双十一喵喵",
+            "file": "files/1.js",
+            "version": "1.8.9",
+            "desc": "一键完成淘宝喵币任务"
+        },{
+            "id":2,
+            "name": "全自动淘宝撸猫",
+            "file": "files/2.js",
+            "version": "1.2.5",
+            "desc": "猫猫自动点击得喵币"
+        },{
+            "id":3,
+            "hidden":true,
+            "name": "测试",
+            "file": "files/3.js",
+            "version": "1.0.1",
+            "desc": "你的一点仓库不是最新版本！"
+        },{
+            "id":4,
+            "name": "钉钉一键打卡",
+            "file": "files/4.js",
+            "version": "1.0.0",
+            "desc": "钉钉一键打卡"
+        },{
+            "id":5,
+            "name": "屏幕连点器",
+            "file": "files/5.js",
+            "version": "1.0.5",
+            "desc": "屏幕连点器"
+        }]
+    }
+}

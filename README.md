@@ -29,10 +29,9 @@ https://github.com/chrrg/chrrg.github.io/
 提交Pull Request  
 等待合并即可  
 
-<span id="jump2">如何查看其它脚本：</span>
-所有脚本均保存到
-https://github.com/chrrg/chrrg.github.io/
-中
+# <span id="jump2">如何查看其它脚本：</span>
+所有脚本均保存到https://github.com/chrrg/chrrg.github.io/中
+可以去上述链接找到脚本源文件
 应用启动时会首先获取https://chrrg.github.io/chhub/hub.json的数据
 <span id="jump3">如何查看其它脚本：</span>
 <span id="jump4">如何查看其它脚本：</span>
@@ -49,7 +48,7 @@ https://github.com/chrrg/chrrg.github.io/
 应用中调用提供的api  
 用户确认后即可完成仓库地址的切换  
 
-<span id="free">免责声明：</span>
+# <span id="free">免责声明：</span>
 由于所有人可上传自己的脚本  
 并且脚本上传后具有动态可变性
 不能保证脚本100%安全  

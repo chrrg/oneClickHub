@@ -27,34 +27,44 @@
 本项目将长期维护  
 
 # <span id="howtouse">如何使用：</span>
-硬件要求：
+硬件要求：  
 Android设备（需带有无障碍服务功能）  
 若涉及到触摸点击功能需使用`Android7.0`以上设备  
 软件要求：  
 本App可以在本项目的`release`中下载  
 安装并运行即可  
+
 # <span id="develop">如何开发你的脚本：</span>
-开发环境搭建  
-Windows脚本推送到手机：  
-需要安装nodeJS  
-clone以下项目：https://github.com/chrrg/autojs_extension  
-修改/out/vscode.js里的路径为你fork的/chhub/文件夹  
-打开cmd切换目录到/out/  
+准备环境：
+NodeJS  
+Win/Linux/Mac均可
+
+clone以下项目：  
+https://github.com/chrrg/autojs_extension  
+修改/out/vscode.js里的21行的路径为你fork的chhub文件夹  
+如以下修改：
+```js
+exports.workspace={
+    workspaceFolders:'D:/文档/GitHub/chrrg.github.io/chhub'//工作目录需要在这里修改
+};
+```
+
+打开命令行控制台切换目录到/out/  
 运行node run即可运行  
 
 手机安装AutoJs 4.1.1  
-侧边栏连接电脑后  
-键入r回车即可运行  
+打开后侧边栏连接电脑  
+输入电脑的IP  
 
-调试方法：
-修改main.js
-在第一行输入
-runTest(1);exit();
+在控制台键入r回车即可运行项目q结束运行  
+
+调试方法：  
+修改main.js  
+在第一行输入  
+runTest(1);exit();//1改为自己的脚本文件名
 电脑上键入r并回车可以立即在手机上运行/files/1.js脚本  
-
-
+支持console.log显示到电脑端  
 开发细节或api请仔细阅读AutoJS开发文档：https://hyb1996.github.io/AutoJs-Docs/  
-
 
 # <span id="jump">如何上传你的脚本：</span>
 上传脚本到默认仓库：  
@@ -80,6 +90,7 @@ fork并按照格式修改hub.json
 恶意行为的脚本  
 修改他人上传的文件或配置  
 加载第三方不可预测安全的代码  
+
 ## 关于脚本
 每一个脚本仅对应一个js文件  
 不支持引入其它文件  
@@ -99,7 +110,7 @@ fork并按照格式修改hub.json
 在你的脚本中可直接使用api对象进行各种函数的调用  
 
 ## Api列表：  
-- api.ui()  
+### api.ui()
 
 非ui线程下使用：  
 api.ui()  
@@ -121,6 +132,13 @@ threads.start(function () {
     api.ui()
 });
 ```
+
+### api.getId()
+获取应用名
+
+### api.getExtras()
+获取启动时传入的参数
+
 
 # <span id="myHub">搭建自己的仓库：</span>
 官方仓库地址：`https://chrrg.github.io/chhub/hub.json`  

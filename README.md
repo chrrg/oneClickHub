@@ -61,7 +61,7 @@ exports.workspace={
 调试方法：  
 修改main.js  
 在第一行输入  
-runTest(1);exit();//1改为自己的脚本文件名
+runTest(1);exit();//1改为自己的脚本文件名  
 电脑上键入r并回车可以立即在手机上运行/files/1.js脚本  
 支持console.log显示到电脑端  
 开发细节或api请仔细阅读AutoJS开发文档：https://hyb1996.github.io/AutoJs-Docs/  
@@ -79,7 +79,7 @@ runTest(1);exit();//1改为自己的脚本文件名
 ## fork上述项目
 fork并按照格式修改hub.json  
 并将你的脚本添加到/chhub/files/目录下  
-每次修改代码hub.json版本号需要变动，否则用户不会收到更新
+每次修改代码hub.json版本号需要变动，否则用户不会收到更新  
 提交 `Pull Request`   
 等待合并即可  
 
@@ -120,7 +120,7 @@ api.ui()
 参数：(selector,offset,size)  
 selector为选择器  
 offset为起始索引，size为从起始值查询多少个元素  
-最简单的调用方法为`api.ui()`
+最简单的调用方法为`api.ui()`  
 
 ```js
 api.ui(packageName(currentPackage()),0,500);
@@ -134,10 +134,10 @@ threads.start(function () {
 ```
 
 ### api.getId()
-获取应用名
+获取应用名  
 
 ### api.getExtras()
-获取启动时传入的参数
+获取启动时传入的参数  
 
 
 # <span id="myHub">搭建自己的仓库：</span>

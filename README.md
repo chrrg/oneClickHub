@@ -37,7 +37,7 @@ Android设备（需带有无障碍服务功能）
 # <span id="develop">如何开发你的脚本：</span>
 准备环境：
 NodeJS  
-Win/Linux/Mac均可
+Win/Linux/Mac 均可
 
 clone以下项目：  
 https://github.com/chrrg/autojs_extension  
@@ -61,7 +61,10 @@ exports.workspace={
 调试方法：  
 修改main.js  
 在第一行输入  
-runTest(1);exit();//1改为自己的脚本文件名  
+```js
+runTest(1);//1改为自己的脚本文件名
+exit();
+```
 电脑上键入r并回车可以立即在手机上运行/files/1.js脚本  
 支持console.log显示到电脑端  
 开发细节或api请仔细阅读AutoJS开发文档：https://hyb1996.github.io/AutoJs-Docs/  
@@ -142,7 +145,7 @@ threads.start(function () {
 
 # <span id="myHub">搭建自己的仓库：</span>
 官方仓库地址：`https://chrrg.github.io/chhub/hub.json`  
-搭建自己的仓库能够让用户只显示自己仓库中的脚本  
+搭建自己的仓库能够让用户只显示自己仓库中的脚本，和自己编写的用户界面  
 ## hub.json文件格式
 ```json
 {

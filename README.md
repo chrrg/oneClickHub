@@ -87,15 +87,14 @@ fork并按照格式修改hub.json
 等待合并即可  
 
 ## 哪些情况的PR会被拒绝
-修改了不允许修改的文件：`ui.js`  
-未按照规定的格式修改了`hub.json`  
+未按照规定的格式修改`hub.json`  
 包含无用的文件或文件夹  
 恶意行为的脚本  
-修改他人上传的文件或配置  
+其它违规行为  
 
 ## 关于脚本
 每一个脚本仅对应一个js文件  
-不支持引入其它文件  
+暂不支持引入其它文件  
 
 # <span id="jump2">如何查看其它脚本：</span>
 所有脚本均保存到 `https://github.com/chrrg/chrrg.github.io/` 中  
@@ -103,8 +102,8 @@ fork并按照格式修改hub.json
 应用启动时会首先获取 `https://chrrg.github.io/chhub/hub.json` 的数据  
 
 # <span id="jump3">脚本安全：</span>
-每一个app在独立的线程中  
-并且有一定的隔离，不会相互修改数据  
+每一个脚本运行在独立的线程中  
+并且有一定的数据隔离，不会相互修改数据  
 
 # <span id="api">Api：</span>
 ## Api的作用
